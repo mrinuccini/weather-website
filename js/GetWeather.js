@@ -1,3 +1,11 @@
+// Checks if the screen resolution < 1080 in that case display warning message
+var screenWidth = window.screen.availWidth;
+
+if(screenWidth <= 1080)
+{
+    alert("There is no mobile version for this website yet ! Please consult it on a Computer");
+}
+
 // La position choisit par l'utilisateur
 let currentPosition = {
     'lat': 48.51,
