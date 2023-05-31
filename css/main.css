@@ -1,0 +1,201 @@
+@font-face {
+    font-family: Roboto;
+    src: url();
+  }
+
+:global
+{
+    --wdark-blue: #097392;
+    --wlight-blue: #83B4B3;
+    --wwhite: #FFF0CE;
+    --worange: #D55534;
+    --wdark: #383838;
+}
+
+body, html
+{
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    background: white;
+}
+
+.mainDiv
+{
+    width: 100vw;
+    height: 100vh;
+    background: var(--wwhite);
+}
+
+.infoDiv
+{
+    float: left;
+    height: 100vh;
+    width: 69vw;
+    background: #fff7e6;
+}
+
+.searchDiv
+{
+    position: absolute;
+    border: 1px solid;
+    border-color: black;
+    border-style: black;
+    width: 30.9vw;
+}
+
+.cityInput
+{
+    position: absolute;
+    border: 0px solid;
+    background-color: rgba(0, 0, 0, 0);
+    color: #383838;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 0.5cm;
+    width: 29vw;
+}
+
+.cityInput:focus
+{
+    outline-width: 0;
+}
+
+input, select, textarea{
+    color: var(--wdark);
+}
+
+.cityInputSearch
+{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    font-size: 0.5cm;
+    width: 1vw;
+    text-align: center;
+    font-family: Roboto;
+}
+
+.frogDiv
+{
+    float: left;
+    height: 100vh;
+    width: 31vw;
+}
+
+.frogImage
+{
+    width: 31vw;
+    height: 100vh;
+}
+
+.weatherTempDiv
+{
+    position: relative;
+    display: flex;
+    flex: auto;
+    justify-content: space-evenly;
+}
+
+#tempText
+{
+    position: absolute;
+
+    font-family: Roboto;
+    font-size: 2.2cm;
+    color: rgb(56,56,56);
+
+    transform: translate(70px, 35px);
+}
+
+.weatherIcon
+{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    transform: translate(-190px, 0px);
+}
+
+.mainDate
+{
+    transform: translate(0, 100px);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 0.6cm;
+    color: rgba(56,56,56, 0.7);
+}
+
+.weatherDescription
+{
+    display: block;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 2cm;
+    transform: translate(0px, 170px);
+    color: rgb(56,56,56);
+}
+
+.MainInfoDiv
+{
+    border-radius: 20px;
+    width: 210px; 
+    float:left; 
+    height:150px; 
+    background:#83B4B3; 
+    margin:10px
+}
+
+.InfoDivs
+{
+    display: flex;
+    justify-content: center;
+
+    transform: translate(0px, 200px);
+}
+
+.InfoDivTitle
+{
+    text-align: center;
+    font-family: Roboto;
+    font-size: 0.7cm;
+    color: #383838;
+    transform: translate(0px, -20px);
+}
+
+.InfoDivContent
+{
+    text-align: center;
+    font-family: Roboto;
+    font-size: 0.5cm;
+    color: #383838;
+    transform: translate(0px, -20px);
+}
+
+.wave-1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 69px;
+}
+
+.wave-1 .shape-fill {
+    fill: #fff7e6;
+}
+
+.InfoIcon
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 50px;
+    height: 50px;
+}

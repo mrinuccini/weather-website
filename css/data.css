@@ -1,0 +1,111 @@
+@font-face {
+    font-family: Roboto;
+    src: url();
+  }
+
+:global
+{
+    --wdark-blue: #097392;
+    --wlight-blue: #83B4B3;
+    --wwhite: #FFF0CE;
+    --worange: #D55534;
+    --wdark: #383838;
+}
+
+.dataDiv
+{
+    width: 100vw;
+    height: 100vh;
+    background: #097392;
+}
+
+.sectionTitle
+{
+    font-family: Roboto;
+    font-size: 2cm;
+    text-align: center;
+    color: #383838;
+}
+
+.DataDivs
+{
+    display: flex;
+    justify-content: center;
+}
+
+.DataDiv
+{
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    float: left;
+    background-color: #FFF0CE;
+    border-radius: 20px;
+}
+
+.graphCharts
+{
+    width: 400px;
+    max-width: 400px;
+    height:150px;
+    max-height: 150px;
+    text-align: center;
+}
+
+.graphChartsEven 
+{
+    width: 200px;
+    max-width: 200px;
+    height:200px;
+    max-height: 200px;
+    transform: translate(100px, 0px);
+    text-align: center;
+}
+
+.DataTitle
+{
+    text-align: center;
+    font-family: Roboto;
+    color:rgba(56,56,56, 0.5);
+}
+
+.chartInfo
+{
+    text-align: center;
+    font-family: Roboto;
+    font-size: 1cm;
+    color:rgba(56,56,56, 1);
+}
+
+.chartInfoDescription
+{
+    text-align: center;
+    font-family: Roboto;
+    font-size: 0.5cm;
+    color:rgba(56,56,56, 0.5);
+}
+
+.ephemeridesData
+{
+    margin: 0 auto;
+    background-color: #83B4B3;
+    width: 350px;
+    height: 100px;
+    border-radius: 30px;
+}
+
+.ephemeridesImage
+{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.ephemeridesTime
+{
+    font-family: Roboto;
+    color: #383838;
+    float: left;
+    transform: translate(50px, 0px);
+}

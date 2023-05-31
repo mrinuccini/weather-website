@@ -1,0 +1,84 @@
+@font-face {
+    font-family: Roboto;
+    src: url();
+  }
+
+:global
+{
+    --wdark-blue: #097392;
+    --wlight-blue: #83B4B3;
+    --wwhite: #FFF0CE;
+    --worange: #D55534;
+    --wdark: #383838;
+}
+
+.TodaysImageDiv
+{
+    width: 100vw;
+    height: 130vh;
+    background: #D55534;
+}
+
+.wave-3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-3 svg {
+    position: relative;
+    display: block;
+    width: calc(112% + 1.3px);
+    height: 54px;
+    transform: rotateY(180deg);
+}
+
+.wave-3 .shape-fill {
+    fill: #FFF0CE;
+}
+
+.dailyImage
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 1280px;
+    height: 720px;
+}
+
+.dailyImageTitle
+{
+    font-family: Roboto;
+    color: #383838;
+}
+
+.dailyImageContentDiv
+{
+    text-align: center;
+}
+
+.wave-4 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-4 svg {
+    position: relative;
+    display: block;
+    width: calc(112% + 1.3px);
+    height: 54px;
+    transform: rotateY(180deg);
+}
+
+.wave-4 .shape-fill {
+    fill: #383838;
+}
