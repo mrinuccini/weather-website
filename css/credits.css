@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Roboto;
+    src: url();
+  }
+
+:global
+{
+    --wdark-blue: #097392;
+    --wlight-blue: #83B4B3;
+    --wwhite: #FFF0CE;
+    --worange: #D55534;
+    --wdark: #383838;
+}
+
+.Credits
+{
+    width: 100vw;
+    height: 20vh;
+    background-color: #383838;
+}

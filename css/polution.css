@@ -1,0 +1,58 @@
+@font-face {
+    font-family: Roboto;
+    src: url();
+  }
+
+:global
+{
+    --wdark-blue: #097392;
+    --wlight-blue: #83B4B3;
+    --wwhite: #FFF0CE;
+    --worange: #D55534;
+    --wdark: #383838;
+}
+
+.PolutionDiv
+{
+    width: 100vw;
+    height: 120vh;
+    background: #FFF0CE;
+}
+
+.wave-2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 45px;
+    transform: rotateY(180deg);
+}
+
+.wave-2 .shape-fill {
+    fill: #097392;
+}
+
+.airPollutionDiv
+{
+    display: flex;
+    justify-content: center;
+}
+
+.ParticleDiv
+{
+    float: left;
+    width: 400px;
+    height: 250px;
+    background-color: #097392;
+    margin: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
