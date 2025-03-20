@@ -14,25 +14,25 @@ let currentPosition = {
 
 // Les jours de la semaine (nombre -> string)
 const days = {
-    '0': 'Dim',
-    '1': 'Lun',
-    '2': 'Mar',
-    '3': 'Mer',
-    '4': 'Jeu',
-    '5': 'Ven',
-    '6': 'Sam'
+    '0': 'Sun',
+    '1': 'Mon',
+    '2': 'Tue',
+    '3': 'Wed',
+    '4': 'Thu',
+    '5': 'Fri',
+    '6': 'Sat'
 };
 
 // Les mois de l'année (nombre -> string)
 const months = {
-    '1': 'Janv',
-    '2': 'Févr',
-    '3': 'Mars',
+    '1': 'Jan',
+    '2': 'Feb',
+    '3': 'Mar',
     '4': 'Avr',
-    '5': 'Mai',
-    '6': 'Juin',
-    '7': 'Juillet',
-    '8': 'Août',
+    '5': 'May',
+    '6': 'June',
+    '7': 'July',
+    '8': 'Aug',
     '9': 'Sept',
     '10': 'Oct',
     '11': 'Nov',
@@ -41,11 +41,11 @@ const months = {
 
 // On traduit la qualité de l'air en un nombre
 const airQuality = {
-    1: 'Très bonne 👍',
-    2: 'Bonne 👍',
-    3: 'Médiocre',
-    4: 'Mauvaise 👎',
-    5: 'Très mauvaise 👎',
+    1: 'Very good 👍',
+    2: 'Good 👍',
+    3: 'Poor',
+    4: 'Bad 👎',
+    5: 'Very Bad 👎',
 };
 
 // Quand le document est pret on demande a l'utilisateur pour la géolocalisation
@@ -58,18 +58,8 @@ $(function(){
         document.getElementById("dailyImageDescription").innerHTML = result["explanation"];
     });
 
-    // Si le naviguateur supporte la géolocalisation
-    if(navigator.geolocation)
-    {
-        navigator.geolocation.getCurrentPosition(function(position) // On récupère la position de l'utilisateur
-        {
-            currentPosition['lon'] = position.coords.longitude;
-            currentPosition['lat'] = position.coords.latitude;
-        }, function() // si il y a une erreur, on informe l'utilisateur
-        {
-            console.log("There was an error trying to geolocate user.");
-        }); 
-     }
+    document.getElementById("cityInput").value = "Paris";
+    UpdateWeather();
     
     // Change le label du jour pour avoir la bonne date
     let currentDate = new Date();
@@ -83,7 +73,7 @@ $(function(){
 // Récupère la longitude et la latitude d'une ville en fonction de son nom
 var FetchCoordinates = async function(cityName) {
     // On envoie les données a openweathermap
-    const response = await fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&appid=c60390ff5c695b66c5030487969cc117', {
+    const response = await fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&appid=c60390ff5c695b66c5030487969cc117', {
         method: 'GET'
     })
     
@@ -95,7 +85,7 @@ var FetchCoordinates = async function(cityName) {
 // Pour récupérer la météo a partir de la position de l'utilisateur
 var FetchWeather = async function () {
     // On appelle l'API pour récupérer la météo
-    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + currentPosition["lat"] + '&lon=' + currentPosition["lon"] + '&units=metric&appid=c60390ff5c695b66c5030487969cc117&lang=fr', {
+    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + currentPosition["lat"] + '&lon=' + currentPosition["lon"] + '&units=metric&appid=c60390ff5c695b66c5030487969cc117&lang=en', {
         method: 'GET',
     });
 
@@ -107,7 +97,7 @@ var FetchWeather = async function () {
 // Pour récupérer la pollution de l'air a partir de la positon de l'utilisateur
 var FetchPollution = async function() {
     // On appelle l'API pour récupérer la pollution
-    const response = await fetch('http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=' + currentPosition["lat"] + '&lon=' + currentPosition["lon"] + '&units=metric&appid=c60390ff5c695b66c5030487969cc117&lang=fr', {
+    const response = await fetch('https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=' + currentPosition["lat"] + '&lon=' + currentPosition["lon"] + '&units=metric&appid=c60390ff5c695b66c5030487969cc117&lang=en', {
         method: 'GET',
     });
 
@@ -218,7 +208,7 @@ function GenerateGraphs(weatherJSON)
     });
 
     document.getElementById("humidityChartLevel").innerHTML = weatherJSON["main"]["humidity"] + '%';
-    document.getElementById("humidityChartLevelDescription").innerHTML = 60 >= Number(weatherJSON["main"]["humidity"]) && Number(weatherJSON["main"]["humidity"]) >= 40 ? "Bon 👍" : "Mauvaise 👎";
+    document.getElementById("humidityChartLevelDescription").innerHTML = 60 >= Number(weatherJSON["main"]["humidity"]) && Number(weatherJSON["main"]["humidity"]) >= 40 ? "Good 👍" : "Bad 👎";
 
     /* Updated the wind Graph */
     let degres = [];
@@ -293,19 +283,19 @@ function GenerateGraphs(weatherJSON)
 
     if(weatherJSON["visibility"] > 8000)
     {
-        document.getElementById("visibilityChartLevelDescription").innerHTML = "Excellente 👍";
+        document.getElementById("visibilityChartLevelDescription").innerHTML = "Very Good 👍";
     }else if(weatherJSON["visibility"] > 6000)
     {
-        document.getElementById("visibilityChartLevelDescription").innerHTML = "Bonne 👍";
+        document.getElementById("visibilityChartLevelDescription").innerHTML = "Good 👍";
     }else if(weatherJSON["visibility"] > 4000)
     {
-        document.getElementById("visibilityChartLevelDescription").innerHTML = "Médiocre";
+        document.getElementById("visibilityChartLevelDescription").innerHTML = "Poor";
     }else if(weatherJSON["visibility"] > 2000)
     {
-        document.getElementById("visibilityChartLevelDescription").innerHTML = "Mauvaise 👎";
+        document.getElementById("visibilityChartLevelDescription").innerHTML = "Bad 👎";
     }else
     {
-        document.getElementById("visibilityChartLevelDescription").innerHTML = "Très Mauvaise 👎";
+        document.getElementById("visibilityChartLevelDescription").innerHTML = "Very Bad 👎";
     }
 
     let sunRise = new Date(weatherJSON["sys"]["sunrise"] * 1000);
@@ -315,3 +305,9 @@ function GenerateGraphs(weatherJSON)
     document.getElementById("sunRiseTime").innerHTML = sunRise.getHours() + ":" + sunRise.getMinutes();
     document.getElementById("sunSetTime").innerHTML = sunSet.getHours() + ":" + sunSet.getMinutes();
 }
+
+$(".cityInput").on('keyup', function (e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+        UpdateWeather();
+    }
+});

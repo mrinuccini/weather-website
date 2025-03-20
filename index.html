@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/credits.css">
         <link rel="stylesheet" href="https://use.typekit.net/oru6afo.css">
         <meta charset="utf-8">
-        <title>Météo en temps réel</title>
+        <title>Realtime Weather</title>
     </head>
 
     <body>
@@ -31,30 +31,30 @@
                 <div class="InfoDivs">
                     <div class="MainInfoDiv">
                         <img class="InfoIcon" src="assets/icons/feels_like.png">
-                        <p class="InfoDivTitle">Ressenti</p>
+                        <p class="InfoDivTitle">Feeling</p>
                         <p class="InfoDivContent" id="ressenti">N/A°C</p>
                     </div>
                     <div class="MainInfoDiv">
                         <img class="InfoIcon" src="assets/icons/mimimum-temperature.png">
-                        <p class="InfoDivTitle">Temp. Min</p>
+                        <p class="InfoDivTitle">Min Temp.</p>
                         <p class="InfoDivContent" id="min-temp">N/A°C</p>
                     </div>
 
                     <div class="MainInfoDiv">
                         <img class="InfoIcon" src="assets/icons/maximum-temperature.png">
-                        <p class="InfoDivTitle">Temp. Max</p>
+                        <p class="InfoDivTitle">Max Temp.</p>
                         <p class="InfoDivContent" id="max-temp">N/A°C</p>
                     </div>
 
                     <div class="MainInfoDiv">
                         <img class="InfoIcon" src="assets/icons/humidity.png">
-                        <p class="InfoDivTitle">Humidité</p>
+                        <p class="InfoDivTitle">Humidity</p>
                         <p class="InfoDivContent" id="humidity">N/A%</p>
                     </div>
 
                     <div class="MainInfoDiv">
                         <img class="InfoIcon" src="assets/icons/wind-speed.png">
-                        <p class="InfoDivTitle">Vitesse du Vent</p>
+                        <p class="InfoDivTitle">Wind Speed</p>
                         <p class="InfoDivContent" id="wind-speed">N/Akm/h</p>
                     </div>
                 </div>
@@ -70,31 +70,31 @@
                 </svg>
             </div>
 
-            <h1 class="sectionTitle">Données avancées</h1>
+            <h1 class="sectionTitle">Advanced Data</h1>
 
             <div class="DataDivs">
                 <div class="DataDiv">
-                    <h1 class="DataTitle">Humidité</h1>
+                    <h1 class="DataTitle">Humidity</h1>
                     <canvas id="humidityChart" class="graphCharts"></canvas>
                     <h1 id="humidityChartLevel" class="chartInfo">N/A%</h1>
                     <p id="humidityChartLevelDescription" class="chartInfoDescription">N/A</p>
                 </div>
 
                 <div class="DataDiv">
-                    <h1 class="DataTitle">Status du vent</h1>
+                    <h1 class="DataTitle">Wind Status</h1>
                     <canvas id="windChart" class="graphChartsEven"></canvas>
                     <h1 id="windChartInfo" class="chartInfo">N/Akm/h</h1>
                 </div>
 
                 <div class="DataDiv">
-                    <h1 class="DataTitle">Visibilité</h1>
+                    <h1 class="DataTitle">Visibility</h1>
                     <canvas id="visibilityChart" class="graphCharts"></canvas>
                     <h1 id="visibilityChartLevel" class="chartInfo">N/Akm</h1>
                     <p id="visibilityChartLevelDescription" class="chartInfoDescription">N/A</p>
                 </div>
 
                 <div class="DataDiv">
-                    <h1 class="DataTitle">Éphémérides</h1>
+                    <h1 class="DataTitle">Ephemeris</h1>
 
                     <div class="ephemeridesData">
                         <img class="ephemeridesImage" src="assets/icons/sunrise.png" alt="Sun Rise Icon">
@@ -122,11 +122,11 @@
                 </svg>
             </div>
 
-            <h1 class="sectionTitle">Pollution de l'air</h1>
+            <h1 class="sectionTitle">Air pollution</h1>
 
             <div class="airPollutionDiv">
                 <div class="ParticleDiv">
-                    <h1 class="DataTitle" style="color:#383838;">Qualité globale de l'air</h1>
+                    <h1 class="DataTitle" style="color:#383838;">Global air quality</h1>
                     <p class="chartInfoDescription" style="font-size:1cm;" id="airQuality">N/A</p>
                     <h1 class="chartInfo" id="airQualityDescription">N/A</h1>
                 </div>
@@ -134,25 +134,25 @@
 
             <div class="airPollutionDiv">
                 <div class="ParticleDiv">
-                    <h1 class="DataTitle" style="color:#383838;">Concentration de Monoxyde de Carbone</h1>
+                    <h1 class="DataTitle" style="color:#383838;">Carbon Monoxyde concentration</h1>
                     <p class="chartInfoDescription">CO</p>
                     <h1 class="chartInfo" id="carbonMonoxydeLevel">N/Aμg/m3</h1>
                 </div>
 
                 <div class="ParticleDiv">
-                    <h1 class="DataTitle" style="color:#383838;">Concentration de Monoxyde d'Azote</h1>
+                    <h1 class="DataTitle" style="color:#383838;">Nytrogen Monoxyde concentration</h1>
                     <p class="chartInfoDescription">NO</p>
                     <h1 class="chartInfo" id="azoteMonoxydeLevel">N/Aμg/m3</h1>
                 </div>
 
                 <div class="ParticleDiv">
-                    <h1 class="DataTitle" style="color:#383838;">Concentration de Dioxyde d'Azote</h1>
+                    <h1 class="DataTitle" style="color:#383838;">Nytrogen dioxyde concentration</h1>
                     <p class="chartInfoDescription">NO2</p>
                     <h1 class="chartInfo" id="dioxydeAzoteLevel">N/Aμg/m3</h1>
                 </div>
 
                 <div class="ParticleDiv">
-                    <h1 class="DataTitle" style="color:#383838;">Concentration d'Ozone</h1>
+                    <h1 class="DataTitle" style="color:#383838;">Ozone concentration</h1>
                     <p class="chartInfoDescription">O3</p>
                     <br>
                     <h1 class="chartInfo" id="ozoneLevel">N/Aμg/m3</h1>
@@ -161,7 +161,7 @@
 
             <div class="airPollutionDiv">
                 <div class="ParticleDiv">
-                    <h1 class="DataTitle" style="color:#383838;">Concentration de Dioxyde de Soufre</h1>
+                    <h1 class="DataTitle" style="color:#383838;">Sulfur Dioxyde concentration</h1>
                     <p class="chartInfoDescription">SO2</p>
                     <h1 class="chartInfo" id="dioxydeDeSoufreLevel">N/Aμg/m3</h1>
                 </div>
@@ -173,13 +173,13 @@
                 </div>
 
                 <div class="ParticleDiv">
-                    <h1 class="DataTitle" style="color:#383838;">Concentration de Particules Fines</h1>
+                    <h1 class="DataTitle" style="color:#383838;">Fine Particles Concentration</h1>
                     <p class="chartInfoDescription">PM10</p>
                     <h1 class="chartInfo" id="pm10Level">N/Aμg/m3</h1>
                 </div>
 
                 <div class="ParticleDiv">
-                    <h1 class="DataTitle" style="color:#383838;">Concentration d'Ammoniac</h1>
+                    <h1 class="DataTitle" style="color:#383838;">Fine Particles Concentration</h1>
                     <p class="chartInfoDescription">NH3</p>
                     <h1 class="chartInfo" id="ammoniacLevel">N/Aμg/m3</h1>
                 </div>
@@ -198,7 +198,7 @@
                 </svg>
             </div>
 
-            <h1 class="sectionTitle">Image du jour (via NASA)</h1>
+            <h1 class="sectionTitle">Todays Image (via NASA)</h1>
 
             <div class="dailyImageContentDiv">
                 <img class="dailyImage" id="dailyImage" alt="Image du jour fourni par la NASA">
